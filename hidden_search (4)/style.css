@@ -1,0 +1,32 @@
+body {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search input {
+  background-color: #fff;
+  border: 0;
+  font-size: 18px;
+  padding: 15px;
+  width: 70px;
+  transition: width 0.3s ease-in-out;
+  outline: none;
+}
+
+.search input:focus {
+  width: 300px;
+  border: rgb(111, 110, 110) solid 1px;
+}
