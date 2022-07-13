@@ -5,6 +5,10 @@ const circles = document.querySelectorAll(".circle");
 
 let currentStep = 1;
 
+window.addEventListener("DOMContentLoaded", (event) => {
+  progress.style.width = `${(currentStep / circles.length) * 100}%`;
+});
+
 nextButton.addEventListener("click", () => {
   currentStep++;
   if (currentStep > circles.length) {
@@ -50,3 +54,5 @@ prevButton.addEventListener("click", () => {
     prevButton.disabled = true;
   }
 });
+
+// on document load progress bar is set to 1/3
