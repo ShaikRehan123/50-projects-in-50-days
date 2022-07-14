@@ -1,0 +1,43 @@
+body {
+  overflow-x: hidden;
+  background-color: rgb(210, 199, 199);
+  color: rgb(36, 33, 33);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+::selection {
+  background: rgb(40, 201, 246);
+  color: rgb(255, 255, 255);
+}
+.header {
+  text-align: center;
+  font-size: 1em;
+}
+
+.box {
+  background-color: white;
+  width: 70%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  transition: transform 0.4s ease-in-out;
+}
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+.box:nth-of-type(odd) {
+  transform: translateX(400%);
+}
+.box.show {
+  transform: translateX(0);
+}
